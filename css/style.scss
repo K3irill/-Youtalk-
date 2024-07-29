@@ -1,0 +1,15 @@
+@import "nullStyle.scss";
+// --------------------------------------
+// Настройки обёртки и основных классов;
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.__container{
+    min-width: 1200px;
+    margin: 0  auto;
+    
+}
