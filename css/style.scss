@@ -171,6 +171,12 @@
 @media (max-width:425px){
     .same-block-title{
         margin: 30px 0px 20px 0px;
+        font-size: 32px;
+    }
+}
+@media (max-width:350px){
+    .same-block-title{
+        font-size: 24px;
     }
 }
 .filter-section {
