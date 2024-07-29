@@ -36,9 +36,9 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: Roboto;
-  font-size: 16px;
-  color: #000000;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #333333;
 }
 
 input,
@@ -95,6 +95,103 @@ h6 {
 }
 
 .__container {
-  min-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header {
+  width: 100%;
+  height: 76px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px 20px 32px;
+}
+@media (max-width: 425px) {
+  .header .header__container {
+    padding: 20px 20px 20px 20px;
+  }
+}
+.header__body {
+  display: flex;
+  align-items: center;
+}
+.header_link-logo {
+  margin-right: 51px;
+}
+@media (max-width: 946px) {
+  .header .header_link-logo {
+    margin-right: 32px;
+  }
+}
+.header_button {
+  background-color: #E3F5F5;
+  color: #03B2A5;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 14px 20px;
+}
+@media (max-width: 859px) {
+  .header .header_button {
+    display: none;
+  }
+}
+.header_burger {
+  background-color: transparent;
+}
+@media (min-width: 860px) {
+  .header .header_burger {
+    display: none;
+  }
+}
+.header .nav-menu_list {
+  display: flex;
+  text-wrap: nowrap;
+  font-weight: 500px;
+  line-height: 114.2857142857%;
+}
+.header .nav-menu_item:not(:last-child) {
+  margin-right: 30px;
+}
+.header .nav-menu_arrow-for-link::after {
+  content: url(/img/header/header-bottom-arrow.svg);
+  position: relative;
+  top: 0;
+  left: 6px;
+}
+@media (max-width: 946px) {
+  .header .nav-menu_item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 859px) {
+  .header .nav-menu {
+    display: none;
+  }
+}
+.header_underline {
+  width: 100%;
+  height: 1px;
+  background-color: #EFF5FB;
+}
+.site-nav {
+  padding: 16px 0px 0px 32px;
+}
+.site-nav_list {
+  display: flex;
+}
+.site-nav_item:not(:first-child) {
+  padding-left: 18px;
+}
+.site-nav_item:not(:first-child) ::before {
+  content: url(/img/header/header-right-arrow.svg);
+  position: relative;
+  top: 2px;
+  left: -8px;
+}
+.site-nav_link {
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
