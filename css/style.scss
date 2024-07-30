@@ -155,10 +155,26 @@
 //Main-block------------------------------------------------------
 
 .main-block {
+    
+
+    &_button{
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        background-color: #35B3A9;
+        border-radius: 4px;
+        font-weight: 700;
+        width: 182px;
+        height: 48px;
+        align-self: center;
+        margin: 35px 0px 60px 0px;
+        
+    }
     &_title {
     }
 
     &__container {
+        display: flex;
+        flex-direction: column;
     }
 
 }
