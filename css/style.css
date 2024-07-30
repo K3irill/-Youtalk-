@@ -278,6 +278,8 @@ h6 {
     overflow-x: auto;
     max-width: auto;
     overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #2fa8ee #f5f2f2;
   }
   .filter-section_item {
     margin-top: 16px;
