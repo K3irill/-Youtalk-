@@ -290,6 +290,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   min-height: 499px;
+  margin-bottom: 20px;
 }
 .big-article-section__big-article {
   display: flex;
@@ -308,7 +309,7 @@ h6 {
     margin: 0;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 586px) {
   .big-article-section .big-article {
     margin-bottom: 16px;
   }
@@ -338,27 +339,35 @@ h6 {
   margin: 8px 0px 0px 8px;
 }
 .big-article_title {
+  padding: 16px 16px 0 16px;
   font-size: 18px;
   font-weight: 700;
   line-height: 144.4444444444%;
 }
 .big-article_author {
+  padding: 4px 0px 8px 16px;
   font-size: 12px;
   line-height: 150%;
 }
 .big-article_text {
+  padding: 0px 16px 0 16px;
   line-height: 142.8571428571%;
   margin-bottom: 42px;
 }
 .big-article_date {
+  padding: 16px;
   font-size: 12px;
   line-height: 150%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .big-article__body {
+  position: relative;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(222, 222, 222);
   border-radius: 0px 0px 14px 14px;
-  padding: 16px;
+  height: 240px;
 }
 
 @media (max-width: 799px) {
@@ -369,4 +378,39 @@ h6 {
   .big-article {
     max-width: 760px;
   }
+}
+.small-article-section {
+  min-height: 475px;
+  display: grid;
+  grid-template: minmax(475px, auto) minmax(475px, auto)/minmax(288px, 384px) minmax(288px, 384px) minmax(288px, 384px);
+  gap: 24px;
+}
+
+@media (max-width: 976px) {
+  .small-article-section {
+    grid-template: minmax(475px, auto) minmax(475px, auto) minmax(475px, auto)/minmax(288px, 1fr) minmax(288px, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 636px) {
+  .small-article-section {
+    grid-template: minmax(475px, auto) minmax(475px, auto)/minmax(288px, 1fr);
+    gap: 20px;
+  }
+  .small-article__download-yet-for-phhone {
+    display: none;
+  }
+}
+.small-article__body {
+  max-height: 272px;
+}
+
+.small-article-section {
+  margin: 0;
+}
+.small-article-section__small-article {
+  margin: 0;
+}
+.small-article-section__small-article:not(:last-child) {
+  margin-right: 0px;
 }/*# sourceMappingURL=style.css.map */
