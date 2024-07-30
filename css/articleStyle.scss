@@ -1,5 +1,12 @@
 @import "style.scss";
-
+.site-nav_item{
+    text-wrap: nowrap;
+}
+.site-nav_item:last-child{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
 .__container-article{
     max-width: 690px
     
@@ -16,9 +23,21 @@
     padding: 0px 32px 0px 32px;
     font-size: 16px;
 }
+@media (max-width:932px) {
+    .article-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 16px 0px 16px;
+        
+    }
+    
+}
 // sidebar--------------------------------------
 .sidebar {
-
+    margin-left: 20px;
+    
     &_link {
         display: inline-block;
         font-size: 16px;
@@ -37,7 +56,7 @@
         background: rgba(230, 240, 253, 1);
         border-radius: 16px;
         width: 282px;
-        height: 512px;
+        height: 520px;
         text-align: center;
         padding: 24px;
 
@@ -60,7 +79,7 @@
         justify-content: center;
         text-align: center;
         width: 282px;
-        height: 292px;
+        height: 300px;
         border: 1px solid rgba(222, 222, 222, 1);
         border-radius: 16px;
         background-color: rgba(41, 99, 163, 1);
@@ -111,7 +130,7 @@
     &__advertise {
         padding: 32px 0px 32px 32px;
         width: 282px;
-        height: 304px;
+        height: 300px;
         border: 2px solid rgba(41, 99, 163, 1);
         border-radius: 16px;
         overflow: hidden;
@@ -162,7 +181,7 @@
     text-align: center;
     padding: 24px;
     width: 282px;
-    height: 481px;
+    height: 520px;
     box-shadow: 0px 30px 50px 0px rgba(239, 245, 251, 1);
     border: 1px solid rgba(222, 222, 222, 1);
     border-radius: 16px;
@@ -170,7 +189,8 @@
         background: rgb(187, 186, 186);
         width: 100%;
         height: 1px;
-        margin: 16px 0px;
+        margin: 16px auto;
+
     }
     &__info {
 
@@ -231,9 +251,39 @@
         }
     }
 }
+@media (max-width:932px) {
+    .__container-sidebar{
+        width: 900px;
+    }.__container-sidebar{
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        gap: 10px;
+        justify-content: center;
+    }.psicholog{
+        margin: 0;
+    }.sidebar__care{
+        margin: 0;
+    }.sidebar__advertise{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+}
+@media (max-width:642px) {
+    .__container-sidebar{
+        width: 900px;
+    }.__container-sidebar{
+        grid-template: 1fr 1fr/1fr ;
+        gap: 10px;
+    }.sidebar {
+        margin: 0px;
+    }
+}
 .article-block {
     
-    & img{
+    &_img{
+        max-width: 100%;
+        max-height: 100%;
         
     }
     &_author-name {
@@ -314,6 +364,31 @@
         }
     }
 }
+@media (max-width:932px) {
+    .same-block-with-img{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }.same-block-with-img_img{
+        width: 100%;
+        max-height: 300px;
+    }
+    
+}
+@media (max-width:565px) {
+    .same-block-title{
+        font-size: 32px;
+        
+    }
+    
+}
+@media (max-width:376px) {
+    .article-block__content_pre{
+        display: none;
+    }
+    
+}
 .what-else {
 
     &_title {
@@ -375,6 +450,18 @@
     &_text {
     }
 }
+@media (max-width:932px) {
+    .same-block-with-img{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }.same-block-with-img_img{
+        width: 100%;
+        max-height: 300px;
+    }
+    
+}
 .same-block-exercise {
     background: #FEFAEC;
     margin-top: 15px;  
@@ -390,12 +477,22 @@
     margin-top: 20px;
     justify-content: space-between;
     &__side {
-
+        &:not(:last-child){
+            margin-right: 10px;
+        }
         &_img {
             margin-bottom: 20px;
     
         }
     }
+}
+@media (max-width:932px) {
+    .block-with-img{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
 .energy-img-wrap{
     display: flex;
@@ -404,6 +501,7 @@
 }
 .same-block-exercise-3{
     background: #03B2A51A;
+    margin-bottom: 10px;
 
 }
 .article-filter {
@@ -426,6 +524,7 @@
     }
 }
 .help-select-doc {
+    padding: 0px 32px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 158px;
@@ -438,7 +537,7 @@
     }
     &_ibg{
         width: 100%;
-        
+
         object-fit: cover ;
     }
     &__body {
@@ -457,4 +556,9 @@
         }
     }
 }
-
+@media (max-width:1060px) {
+    .help-select-doc, .help-select-doc_ibg, .help-select-doc_element-img, .article_hr, .article-filter{
+        display: none;
+    }
+    
+}
